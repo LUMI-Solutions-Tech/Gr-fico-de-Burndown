@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+
+    <h2>Burndown</h2>
+    <div>
+        <canvas id="grafico1" style="width: 40vw;"></canvas>
+    </div>
+    
+</body>
+<script>
+    let ctx = document.getElementById('grafico1');
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['4', '8', '12', '16', '20', '24', '28', '30'],
+            datasets: [{
+                label: 'Restante',
+                backgroundColor: 'rgb(160, 32, 240)',
+                borderColor: 'rgb(160, 32, 240)',
+                data: [350, 325, 300, 150, 120, 110,  ],
+                borderWidth: 2
+            }, {
+                label: 'Velocidade da Meta',
+                backgroundColor: 'rgb(255, 165, 0)',
+                borderColor: 'rgb( 255, 165, 0)',
+                data: [350, 300, 250, 200, 150, 100, 50, 0],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+    });
+
+</script>
+</html>
