@@ -1,2 +1,2 @@
-# Gr-fico-de-Burndown
+# Gráfico-de-Burndown
 Cultura digital e sociedade
